@@ -1,0 +1,132 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0f7fa, #a5d6a7); /* Degradado suave verde/azul, fresco */
+    color: #333; /* Color de texto oscuro para buena legibilidad */
+    display: flex; /* Usamos flexbox en el body */
+    justify-content: center; /* Centra el contenido horizontalmente dentro del body */
+    align-items: flex-start; /* Alinea el contenido al inicio verticalmente (arriba) */
+    min-height: 100vh; /* Ocupa al menos toda la altura de la ventana */
+    /* Quitamos el text-align: center del body para que lo maneje el main-wrapper */
+}
+
+/* Nuevo contenedor para centralizar todo el contenido principal */
+.main-wrapper {
+    max-width: 800px; /* Ancho máximo para el contenido */
+    width: 90%; /* Ancho responsivo */
+    margin: 40px auto; /* Centra el div horizontalmente y da un margen superior/inferior */
+    padding: 20px;
+    box-sizing: border-box; /* Incluye padding en el ancho total */
+    text-align: center; /* Centra todo el texto y elementos inline/inline-block dentro de este div */
+}
+
+.logo-container {
+    margin-top: 0px; /* Ajustamos el margen superior aquí, ya que el main-wrapper tiene uno */
+    margin-bottom: 30px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    /* Los elementos dentro del logo ya están centrados por text-align: center del main-wrapper */
+}
+
+.leaf-icon {
+    font-size: 2.5em;
+    color: #388e3c;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 2em;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+h1 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+    font-size: 2.5em;
+}
+
+p {
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    max-width: 600px; /* Mantenemos este max-width para el párrafo si es necesario */
+    padding: 0 20px; /* Padding horizontal */
+    margin-left: auto; /* Centra el párrafo dentro del main-wrapper */
+    margin-right: auto; /* Centra el párrafo dentro del main-wrapper */
+}
+
+.input-section {
+    display: flex;
+    justify-content: center; /* Centra el input y el botón dentro de esta sección */
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+input#tipInput {
+    padding: 12px 15px;
+    border: 1px solid #81c784;
+    border-radius: 25px;
+    font-size: 1em;
+    width: 300px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+input#tipInput:focus {
+    outline: none;
+    border-color: #388e3c;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15);
+}
+
+button#searchButton {
+    padding: 12px 25px;
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+button#searchButton:hover {
+    background-color: #2e7d32;
+}
+
+#results {
+    background-color: #f1f8e9;
+    border: 1px solid #a5d6a7;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    max-width: 700px;
+    width: 100%; /* Ocupa el 100% del main-wrapper */
+    box-sizing: border-box;
+    text-align: left; /* Mantenemos el texto de resultados a la izquierda para legibilidad */
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.1);
+    margin-left: auto; /* Centra la caja de resultados dentro del main-wrapper */
+    margin-right: auto; /* Centra la caja de resultados dentro del main-wrapper */
+}
+
+#results h3 {
+    color: #388e3c;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#results p {
+    color: #444;
+    line-height: 1.7;
+}
+
+#results.loading {
+    font-style: italic;
+    color: #777;
+}
